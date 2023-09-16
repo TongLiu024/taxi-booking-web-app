@@ -13,9 +13,9 @@ const Navbar = () => {
             height={40}
             />
             <div className='hidden md:flex gap-6 justify-between'>
-                <h2 className='hover:bg-purple-100 rounded-md p-2 cursor-pointer transition-all'>Home</h2>
-                <h2 className='hover:bg-purple-100 cursor-pointer transition-all rounded-md p-2'>History</h2>
-                <h2 className='hover:bg-purple-100 cursor-pointer transition-all rounded-md p-2'>Support</h2> 
+                <h2 className='hover:bg-purple-400 rounded-md p-2 cursor-pointer transition-all'>Home</h2>
+                <h2 className='hover:bg-purple-400 cursor-pointer transition-all rounded-md p-2'>History</h2>
+                <h2 className='hover:bg-purple-400 cursor-pointer transition-all rounded-md p-2'>Support</h2> 
             </div>
         </div>
         <div className='items-center'>
