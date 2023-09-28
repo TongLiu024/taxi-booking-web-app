@@ -12,11 +12,11 @@ const AutoCompleteAddress = () => {
     const res = await fetch('/api/search_address?q='+source, 
     {
       headers: {
-        'Content_Type': 'application/json',
+        "Content-Type": "application/json",
       }
-    })
+    });
 
-    const result = await res.json();
+    const result = await res.text();
     setAddressList(result);
     
   }
@@ -24,19 +24,23 @@ const AutoCompleteAddress = () => {
 
   //to call the getAddressList every time the input changes 
   useEffect(() => {
+    //setTimeOut fucntion get called, its inner function gets called and the the call stack does not stop until 1000 ms has passed 
+    //setTimeOut function has to be called within the ClearTimeOut function 
+    //every time user key in some letter, the useEffect get called, and deleyDeboundFn get called using setTimeOut, only after 1000 ms it can get called again,
+    //WITH THE cleanup function, if the user key in another letter within 1000 ms, the useEFFECT get called again, the clean up function will be called and the timer get resets to starting 1000 ms counting down
 
     const delayDeboundFn = setTimeout(() => {
       getAddressList()  
     }, 1000);
 
-    return clearTimeout(delayDeboundFn);
+    return () => clearTimeout(delayDeboundFn);
 
   }, [source])
 
 
 
   return (
-    <div className='text-black mt-2'>
+    <div className='text-black mt-4'>
       <form action="">
         <div>
           <label className='text-gray-800'>Where From?</label>
@@ -46,9 +50,10 @@ const AutoCompleteAddress = () => {
           onChange={(e)=> setSource(e.target.value)}
           />
           {addressList?.suggestions?
-          <div>
+          <div className='shadow-md p-1 rounded-md absolute w-full bg-purple-50'>
             {addressList?.suggestions.map((item:any, index: number) => (
-              <h2>{item.full_address}</h2>
+              <h2 className='p-3 hover:bg-gray-50 cursor-pointer'
+              onClick={()=>{setSource(item.full_address); setAddressList([]);}}>{item.full_address}</h2>
             ))}
           </div>:null
           }
