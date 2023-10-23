@@ -1,5 +1,5 @@
 import React from 'react'
-import navbarlogo from '../public/navbar-logo.png'
+import navbarlogo from '../components/public/navbar-logo.png'
 import Image from 'next/image'
 import { UserButton } from '@clerk/nextjs'
 

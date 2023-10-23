@@ -1,5 +1,7 @@
 import React from 'react'
 import AutoCompleteAddress from './AutoCompleteAddress'
+import Cars from './Cars'
+import Cards from './Cards'
 
 
 const Booking = () => {
@@ -13,6 +15,8 @@ const Booking = () => {
       <div className='p-2 border-blue-400-[1px] rounded-md'
       >
       <AutoCompleteAddress/>
+      <Cars/>
+      <Cards/>
       </div> 
     </div>
   )
