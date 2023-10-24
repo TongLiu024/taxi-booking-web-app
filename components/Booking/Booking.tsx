@@ -4,6 +4,7 @@ import Cars from './Cars'
 import Cards from './Cards'
 
 
+
 const Booking = () => {
 
   
@@ -17,6 +18,17 @@ const Booking = () => {
       <AutoCompleteAddress/>
       <Cars/>
       <Cards/>
+      <button className='w-full 
+      border-[1px] 
+      m-2 
+      rounded-lg 
+      text-[20px] 
+      p-1 
+      font-semibold
+      bg-yellow-400'
+      >
+        Book
+      </button>
       </div> 
     </div>
   )

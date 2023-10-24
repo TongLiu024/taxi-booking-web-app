@@ -3,10 +3,12 @@ import type { Metadata } from 'next'
 import { Inter, Nunito } from 'next/font/google'
 import { ClerkProvider } from '@clerk/nextjs'
 import Navbar from '@/components/Navbar'
+import { useState,useEffect } from 'react'
 
 
 //inter is a font used as the text style for this applications
 const nunito = Nunito({ subsets: ['latin'] })
+
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -18,6 +20,7 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+  
   return (
     <ClerkProvider>
     <html lang="en">

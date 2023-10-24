@@ -9,7 +9,7 @@ const Cards = () => {
   return (
     <div>
       <h2 className='font-semibold p-1'>Payment Methods</h2>
-      <div className='grid grid-cols-5 items-between gap-1'>
+      <div className='grid grid-cols-5 items-between gap-1 ml-1'>
         {cardsList.map((item, index)=>(
           <div key={index} 
           className={`border-[1px] 
@@ -22,8 +22,8 @@ const Cards = () => {
             <Image
             src={item.image}
             alt={item.image}
-            height={50}
-            width={80}
+            height={30}
+            width={50}
             className='p-1 items-centre justify-center'/>
           </div>
         ))}
