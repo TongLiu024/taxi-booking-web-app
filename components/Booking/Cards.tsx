@@ -2,7 +2,10 @@ import React, { useState } from 'react'
 import cardsList from '../data/cardsList'
 import Image from 'next/image'
 
-
+/**
+ * 
+ * @returns the react component for the payment selection (card types or cash) as part of the user interface 
+ */
 const Cards = () => {
 
   const [selectedPayment, setSelectedPayment] = useState<any>()

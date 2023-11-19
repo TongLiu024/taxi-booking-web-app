@@ -1,13 +1,18 @@
 import { get } from 'http';
 import React, { useEffect, useState } from 'react'
 
-
+/**
+ * the type of pick-up and destination addrsses
+ */
 interface address{
   address: String;
 
 }
 
-
+/**
+ * 
+ * @returns the react component for the Autocomplete address input box as part of the UI
+ */
 const AutoCompleteAddress = () => {
 
   const address1: address = {address:"digd"};

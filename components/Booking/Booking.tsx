@@ -4,7 +4,10 @@ import Cars from './Cars'
 import Cards from './Cards'
 
 
-
+/**
+ * 
+ * @returns the react component of the user interface (Autocomplete Address, Car type selection, and Payment selection)
+ */
 const Booking = () => {
 
   

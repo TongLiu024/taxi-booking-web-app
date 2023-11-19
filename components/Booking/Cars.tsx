@@ -2,7 +2,10 @@ import React, { useState } from 'react'
 import carsList from '../data/carsList'
 import Image from 'next/image'
 
-
+/**
+ * 
+ * @returns the react component for Car type selection as part of the UI
+ */
 const Cars = () => {
 
   const [selectedCar, setSelectedCar] = useState<any>()

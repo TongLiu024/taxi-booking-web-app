@@ -3,6 +3,10 @@ import navbarlogo from '../components/public/navbar-logo.png'
 import Image from 'next/image'
 import { UserButton } from '@clerk/nextjs'
 
+/**
+ * 
+ * @returns the react component of the Navigation bar for the UI
+ */
 const Navbar = () => {
   return (
     <div className='flex gap-10 justify-between p-3 px-9 border-b-[2px] shadow-sm'>
